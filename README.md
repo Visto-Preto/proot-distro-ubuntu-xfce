@@ -15,3 +15,5 @@ apt install xfwm4 xfce4-panel xfce4-settings xfce4-session xfce4-terminal xfdesk
 apt install tigervnc-standalone-server
 
 apt install firefox
+apt install pulseaudio
+pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
