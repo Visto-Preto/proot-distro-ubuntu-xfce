@@ -11,11 +11,9 @@ apt install -y xfwm4 xfce4-panel xfce4-settings xfce4-session xfce4-terminal xfd
 apt install -y thunar geany mousepad tumbler tumbler-plugins-extra ffmpegthumbnailer pulseaudio xfce4-pulseaudio-plugin xfce4-whiskermenu-plugin
 apt-get install -y audacious parole ristretto
 
-cat > $PREFIX/bin/startdesktop <<- _EOF_
-#!/bin/env bash
-
-DISPLAY=:1 startxfce4
-_EOF_
+echo '''#!/bin/env bash
+DISPLAY=:1 startxfce4''' >> $PREFIX/bin/startdesktop
 
 chmod +x /bin/startdesktop
+
 echo -e "\n\n\033[1;36mFinish!\033[0m\n\n"
