@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 echo -e "\n\033[1;36mPROOT-DISTRO UBUNTU XFCE4 Installer \033[0m\n\n"
 echo -e "\n\033[1;36mSCRIPIT 2/2\033[0m\n\n"
@@ -14,6 +14,6 @@ apt-get install -y audacious parole ristretto
 echo '''#!/bin/env bash
 DISPLAY=:1 startxfce4''' >> $PREFIX/bin/startdesktop
 
-chmod +x /bin/startdesktop
+chmod +x $PREFIX/bin/startdesktop
 
 echo -e "\n\n\033[1;36mFinish!\033[0m\n\n"
