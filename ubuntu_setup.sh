@@ -12,8 +12,10 @@ apt install -y thunar geany mousepad tumbler tumbler-plugins-extra ffmpegthumbna
 apt-get install -y audacious parole ristretto
 
 echo '''#!/bin/env bash
-DISPLAY=:1 startxfce4''' >> $PREFIX/bin/startdesktop
+DISPLAY=:1 startxfce4
+''' >> startdesktop
 
-chmod +x $PREFIX/bin/startdesktop
+chmod +x startdesktop
+mv startdesktop /bin
 
 echo -e "\n\n\033[1;36mFinish!\033[0m\n\n"
