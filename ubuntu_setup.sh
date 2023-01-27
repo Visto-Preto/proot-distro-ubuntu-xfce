@@ -16,6 +16,6 @@ DISPLAY=:1 startxfce4
 ''' >> startdesktop
 
 chmod +x startdesktop
-mv startdesktop /bin
+mv startdesktop /bin/
 
 echo -e "\n\n\033[1;36mFinish!\033[0m\n\n"
