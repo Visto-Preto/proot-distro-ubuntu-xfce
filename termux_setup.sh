@@ -22,7 +22,7 @@ DISPLAY=:1 xhost +
 ''' >> startvnc
 
 chmod +x ubuntu startvnc
-mv startvnc ubuntu
-rm -rf startvnc ubuntu
+mv startvnc $PREFIX/usr/bin/
+mv ubuntu $PREFIX/usr/bin/
 
 echo -e "\n\n\033[1;36mFinish!\033[0m\n\n"
