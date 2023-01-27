@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 echo -e "\n\033[1;36mPROOT-DISTRO UBUNTU XFCE4 Installer \033[0m\n\n"
 echo -e "\n\033[1;36mSCRIPIT 1/2\033[0m\n\n"
@@ -20,6 +20,7 @@ vncserver -geometry 1280x720 -noxstartup -listen tcp :1
 DISPLAY=:1 xhost +
 ''' >> $PREFIX/usr/bin/startvnc
 
-chmod +x /usr/bin/ubuntu startvnc
+chmod +x $PREFIX/usr/bin/ubuntu 
+chmod +x $PREFIX/usr/bin/startvnc
 
 echo -e "\n\n\033[1;36mFinish!\033[0m\n\n"
