@@ -11,18 +11,17 @@ apt update
 apt install -y tigervnc xorg-xhost pulseaudio proot-distro
 proot-distro install ubuntu
 
-echo '''#!/usr/bin/env bash
+echo '''#!/usr/bin/bash
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
 proot-distro login ubuntu
-''' >> ubuntu
+''' >>  $PREFIX/bin/ubuntu
 
-echo '''#!/usr/bin/env bash
+echo '''#!/usr/bin/bash
 vncserver -geometry 1280x720 -noxstartup -listen tcp :1
 DISPLAY=:1 xhost +
-''' >> startvnc
+''' >> $PREFIX/bin/startvnc
 
-chmod +x ubuntu startvnc
-mv startvnc $PREFIX/usr/bin/
-mv ubuntu $PREFIX/usr/bin/
+chmod +x $PREFIX/bin/ubuntu 
+chmod +x $PREFIX/bin/startvnc
 
 echo -e "\n\n\033[1;36mFinish!\033[0m\n\n"
