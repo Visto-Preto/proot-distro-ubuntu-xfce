@@ -7,9 +7,9 @@ echo -e "\033[1;36mWait...\033[0m\n"
 sleep 3
 echo -e "\033[1;36mInstalling XFCE4\033[0m\n\n"
 apt update
-apt install -y xfce4 xfce4-goodies mugshot dbus-x11 thunar geany tumbler tumbler-plugins-extra ffmpegthumbnailer pulseaudio xfce4-pulseaudio-plugin xfce4-whiskermenu-plugin
+apt install -y xfce4 xfce4-goodies mugshot dbus-x11 thunar geany tumbler tumbler-plugins-extra ffmpegthumbnailer pulseaudio xfce4-pulseaudio-plugin
 
-echo '''#!/bin/env bash
+echo '''#!/bin/bash
 DISPLAY=:1 startxfce4
 ''' >> /bin/startdesktop
 
