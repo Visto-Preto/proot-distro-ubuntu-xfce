@@ -19,9 +19,15 @@ proot-distro login ubuntu
 echo '''#!/usr/bin/bash
 vncserver -geometry 1280x720 -noxstartup -listen tcp :1
 DISPLAY=:1 xhost +
-''' >> $PREFIX/bin/startvnc
+''' >> $PREFIX/bin/start-desktop
+
+echo '''#!/usr/bin/bash
+vncserver -kill :1
+''' >> $PREFIX/bin/stop-desktop
+
 
 chmod +x $PREFIX/bin/ubuntu 
-chmod +x $PREFIX/bin/startvnc
+chmod +x $PREFIX/bin/start-desktop
+chmod +x $PREFIX/bin/stop-desktop
 
 echo -e "\n\n\033[1;36mFinish!\033[0m\n\n"
