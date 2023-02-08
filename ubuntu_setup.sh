@@ -10,16 +10,16 @@ apt update
 apt install -y xfce4 xfce4-panel-profiles xfce4-whiskermenu-plugin xfce4-taskmanager xfce4-places-plugin mugshot dbus-x11
 apt install -y ristretto mousepad parole thunar geany tumbler tumbler-plugins-extra ffmpegthumbnailer pulseaudio xfce4-pulseaudio-plugin
 
-sudo apt install software-properties-common
-
+apt install -y software-properties-common
 apt install -y tzdata
 apt install locales
-dpkg-reconfigure locales
+
+#dpkg-reconfigure locales
 
 echo '''#!/bin/bash
 DISPLAY=:1 startxfce4
-''' >> /bin/startdesktop
+''' >> /bin/desktop
 
-chmod +x /bin/startdesktop
+chmod +x /bin/desktop
 
 echo -e "\n\n\033[1;36mFinish!\033[0m\n\n"
